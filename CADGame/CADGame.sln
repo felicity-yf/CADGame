@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33927.289
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CADGame", "CADGame.csproj", "{01E3704A-FCB4-4B2E-B1F1-1987DF788830}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CADGame", "CADGame.csproj", "{64594891-1C90-4D59-871F-464255770C0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{01E3704A-FCB4-4B2E-B1F1-1987DF788830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01E3704A-FCB4-4B2E-B1F1-1987DF788830}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01E3704A-FCB4-4B2E-B1F1-1987DF788830}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01E3704A-FCB4-4B2E-B1F1-1987DF788830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64594891-1C90-4D59-871F-464255770C0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64594891-1C90-4D59-871F-464255770C0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64594891-1C90-4D59-871F-464255770C0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64594891-1C90-4D59-871F-464255770C0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6FDE552B-6B85-4826-841C-99C3DF8E61A9}
+		SolutionGuid = {056AF7DD-7104-4292-84CA-EEF918029B29}
 	EndGlobalSection
 EndGlobal

@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace CADGame
 {
-    class Program
+    public class Main
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
