@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\CADGame\CADGame\bin\Debug\CADGame.dll
+C:\Users\Administrator\Desktop\CADGame\CADGame\bin\Debug\CADGame.pdb
+C:\Users\Administrator\Desktop\CADGame\CADGame\obj\Debug\CADGame.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\CADGame\CADGame\obj\Debug\CADGame.dll
+C:\Users\Administrator\Desktop\CADGame\CADGame\obj\Debug\CADGame.pdb
