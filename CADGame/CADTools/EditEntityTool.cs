@@ -433,6 +433,77 @@ namespace CADGame
             return entCopy;
         }
 
+        /// <summary>
+        /// 获取对象
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="entId"></param>
+        /// <returns></returns>
+        public static Entity GetEntity(this Database db, ObjectId entId)
+        {
+            Entity ent;
+
+            using (Transaction tr = db.TransactionManager.StartTransaction())
+            {
+                ent = entId.GetObject(OpenMode.ForRead) as Entity;
+            }
+            return ent;
+        }
+        /// <summary>
+        /// 获取集合中的图形对象
+        /// </summary>
+        /// <param name="ids">ObjectId数组</param>
+        /// <returns>图形对象列表</returns>
+        public static List<Entity> GetEntity(this Database db, ObjectId[] ids)
+        {
+            List<Entity> entList = new List<Entity>();
+            using (Transaction tr = db.TransactionManager.StartTransaction())
+            {
+                for (int i = 0; i < ids.Length; i++)
+                {
+                    Entity ent = ids[i].GetObject(OpenMode.ForRead) as Entity;
+                    entList.Add(ent);
+                }
+            }
+            return entList;
+
+        }
+        /// <summary>
+        /// 删除图形对象列表
+        /// </summary>
+        /// <param name="db">图形数据库</param>
+        /// <param name="ents">列表</param>
+        public static void DeleteEntitys(this Database db,Entity[] ents)
+        {
+            using (Transaction tr = db.TransactionManager.StartTransaction())
+            {
+                for (int i = 0; i < ents.Length; i++)
+                {
+                    Entity ent = ents[i].ObjectId.GetObject(OpenMode.ForWrite) as Entity;
+                    ent.Erase();
+                }
+                tr.Commit();
+            }
+        }
+
+        /// <summary>
+        /// 改变图形对象列表中所有对象的颜色
+        /// </summary>
+        /// <param name="entList">图形对象列表</param>
+        /// <param name="colorIndex">颜色值索引</parma>
+        public static void ChangeColorEntity(List<Entity> entList, byte colorIndex)
+        {
+            Database db = HostApplicationServices.WorkingDatabase;
+            using (Transaction tr = db.TransactionManager.StartTransaction())
+            {
+                for (int i = 0; i < entList.Count; i++)
+                {
+                    Entity ent = entList[i].ObjectId.GetObject(OpenMode.ForWrite) as Entity;
+                    ent.ColorIndex = colorIndex;
+                }
+                tr.Commit();
+            }
+        }
 
 
     }

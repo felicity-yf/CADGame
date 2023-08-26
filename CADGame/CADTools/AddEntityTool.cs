@@ -70,6 +70,30 @@ namespace CADGame
         }
 
         /// <summary>
+        /// 添加图形对象到图形数据库
+        /// </summary>
+        /// <param name="db">图形数据库</param>
+        /// <param name="ents">图形对象数组</param>
+        /// <returns>图形对象的ObjectId列表</returns>
+        public static List<ObjectId> AddEntity(this Database db, Entity[] ents)
+        {
+            List<ObjectId> entIds = new List<ObjectId>();
+            using (Transaction tr = db.TransactionManager.StartTransaction())
+            {
+                BlockTable bt = tr.GetObject(db.BlockTableId, OpenMode.ForRead) as BlockTable;
+                BlockTableRecord btr = tr.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForWrite) as BlockTableRecord;
+                for (int i = 0; i < ents.Length; i++)
+                {
+                    entIds.Add(btr.AppendEntity(ents[i]));
+                    tr.AddNewlyCreatedDBObject(ents[i], true);
+                }
+
+                tr.Commit();
+            }
+            return entIds;
+        }
+
+        /// <summary>
         /// 将多个图形对象添加到图形文件中
         /// </summary>
         /// <param name="db">图形数据库</param>
