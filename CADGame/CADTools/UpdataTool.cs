@@ -22,7 +22,7 @@ using Autodesk.AutoCAD.Internal.Forms;
 
 namespace CADGame
 {
-    public class UpdateTool
+    public static class UpdateTool
     {
         public static void UpdateScreenEx(Entity ent = null)
         {
@@ -34,7 +34,7 @@ namespace CADGame
                                        //acad2014及以上要加,立即处理队列上面的消息
             System.Windows.Forms.Application.DoEvents();
         }
-        public static void UpdateScreenEx(Database db, ObjectId entId)
+        public static void UpdateScreenEx(this Database db, ObjectId entId)
         {
             Entity ent = EditEntityTool.GetEntity(db, entId) as Entity;
             UpdateScreenEx(ent);

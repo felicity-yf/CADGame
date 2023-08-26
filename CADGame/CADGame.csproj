@@ -57,11 +57,19 @@
   <ItemGroup>
     <Compile Include="CADTools\AddEntityTool.cs" />
     <Compile Include="CADTools\BaseTool.cs" />
+    <Compile Include="CADTools\BlockTool.cs" />
     <Compile Include="CADTools\CircleJig.cs" />
+    <Compile Include="CADTools\DimStyle.cs" />
     <Compile Include="CADTools\EditEntityTool.cs" />
     <Compile Include="CADTools\HatchTool.cs" />
+    <Compile Include="CADTools\Layertool.cs" />
     <Compile Include="CADTools\LineJig.cs" />
+    <Compile Include="CADTools\MoveJig.cs" />
+    <Compile Include="CADTools\MyBlockTableRecord.cs" />
     <Compile Include="CADTools\PromptTool.cs" />
+    <Compile Include="CADTools\TextStyle.cs" />
+    <Compile Include="CADTools\TextTool.cs" />
+    <Compile Include="CADTools\UpdataTool.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
