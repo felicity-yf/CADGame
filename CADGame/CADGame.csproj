@@ -33,19 +33,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="accoremgd">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\AutoCAD 2018\accoremgd.dll</HintPath>
+      <HintPath>..\..\..\..\..\UserProgram\AutoCAD2018\AutoCAD 2018\accoremgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="acdbmgd">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\AutoCAD 2018\acdbmgd.dll</HintPath>
+      <HintPath>..\..\..\..\..\UserProgram\AutoCAD2018\AutoCAD 2018\acdbmgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="acmgd">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\AutoCAD 2018\acmgd.dll</HintPath>
+      <HintPath>..\..\..\..\..\UserProgram\AutoCAD2018\AutoCAD 2018\acmgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -70,8 +74,32 @@
     <Compile Include="CADTools\TextStyle.cs" />
     <Compile Include="CADTools\TextTool.cs" />
     <Compile Include="CADTools\UpdataTool.cs" />
+    <Compile Include="CADTools\ViewTool.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Snake\SceneChange\BeginOrEndSceneBase.cs" />
+    <Compile Include="Snake\SceneChange\BeginScene.cs" />
+    <Compile Include="Snake\SceneChange\EndScene.cs" />
+    <Compile Include="Snake\SceneChange\Game.cs" />
+    <Compile Include="Snake\SceneChange\GameScene.cs" />
+    <Compile Include="Snake\SceneChange\ISceneUpdate.cs" />
+    <Compile Include="Snake\Scene\BaseClass\BrickRecord.cs" />
+    <Compile Include="Snake\Scene\BaseClass\Brick.cs" />
+    <Compile Include="Snake\Scene\BaseClass\GameObject.cs" />
+    <Compile Include="Snake\Scene\BaseClass\IDraw.cs" />
+    <Compile Include="Snake\Scene\BaseClass\KeyboardHook.cs" />
+    <Compile Include="Snake\Scene\BaseClass\Position.cs" />
+    <Compile Include="Snake\Scene\BaseClass\Wall.cs" />
+    <Compile Include="Snake\Scene\FoodBrick.cs" />
+    <Compile Include="Snake\Scene\Map\Map.cs" />
+    <Compile Include="Snake\Scene\Snake\Snake.cs" />
+    <Compile Include="Snake\Scene\Snake\SnakeBody.cs" />
+    <Compile Include="Snake\Scene\Snake\SnakeBodyBrick.cs" />
+    <Compile Include="Snake\Scene\Snake\SnakeHeadBrick.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

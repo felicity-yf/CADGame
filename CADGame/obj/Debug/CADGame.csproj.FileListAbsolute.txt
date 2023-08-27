@@ -4,3 +4,12 @@ C:\Users\Administrator\Desktop\CADGame\CADGame\obj\Debug\CADGame.csproj.CoreComp
 C:\Users\Administrator\Desktop\CADGame\CADGame\obj\Debug\CADGame.dll
 C:\Users\Administrator\Desktop\CADGame\CADGame\obj\Debug\CADGame.pdb
 C:\Users\Administrator\Desktop\CADGame\CADGame\obj\Debug\CADGame.csproj.AssemblyReference.cache
+C:\Users\yf\Desktop\CADGame\CADGame\bin\Debug\CADGame.dll
+C:\Users\yf\Desktop\CADGame\CADGame\bin\Debug\CADGame.pdb
+C:\Users\yf\Desktop\CADGame\CADGame\obj\Debug\CADGame.csproj.AssemblyReference.cache
+C:\Users\yf\Desktop\CADGame\CADGame\obj\Debug\CADGame.csproj.CoreCompileInputs.cache
+C:\Users\yf\Desktop\CADGame\CADGame\obj\Debug\CADGame.dll
+C:\Users\yf\Desktop\CADGame\CADGame\obj\Debug\CADGame.pdb
+C:\Users\yf\Desktop\CADGame\CADGame\bin\Debug\System.ValueTuple.dll
+C:\Users\yf\Desktop\CADGame\CADGame\bin\Debug\System.ValueTuple.xml
+C:\Users\yf\Desktop\CADGame\CADGame\obj\Debug\CADGame.csproj.CopyComplete

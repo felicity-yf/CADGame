@@ -25,7 +25,7 @@ using System.Threading;
 
 namespace CADGame
 {
-    public class Main
+    public static class Main
     {
         [CommandMethod("helloCAD")]
         public static void helloCAD()
@@ -40,7 +40,7 @@ namespace CADGame
         public static void tooltest()
         {
             Database db = HostApplicationServices.WorkingDatabase;
-            ObjectId circleId = db.AddCircleToModelSpace(new Point3d(0, 0, 0),200);
+            ObjectId circleId = db.AddCircleToModelSpace(new Point3d(0, 0, 0), 200);
             HatchTool.HatchGradient(db, HatchTool.HatchGradientPattern.GR_LINEAR, 100, 100, circleId, 0);
             db.AddLineToModelSpace(new Point3d(0, 0, 0), new Point3d(300, 300, 0));
             db.AddRectToModelSpace(new Point2d(100, 100), new Point2d(300, 500));
@@ -78,6 +78,38 @@ namespace CADGame
                 }
             }
         }
+
+        public static List<BrickRecord> brickRecord = new List<BrickRecord>();
+
+        [CommandMethod("Snake")]
+        public static void Snake()
+        {
+            Database db = HostApplicationServices.WorkingDatabase;
+            Editor ed = Application.DocumentManager.MdiActiveDocument.Editor;
+            
+            //设置视图
+            Point3d center = new Point3d(0, 0, 0);
+            int width = 20 * 10 + 20;
+            int height = 10 * 10 + 10;
+            ed.VPoint(db,center, width, height);
+            
+            //添加块表记录
+            Brick.BlockId = db.AddBlockTableRecord(Brick.BlockName, Brick.BlockEnts);
+            SnakeHeadBrick.BlockId = db.AddBlockTableRecord(SnakeHeadBrick.BlockName, SnakeHeadBrick.BlockEnts);
+            SnakeBodyBrick.BlockId = db.AddBlockTableRecord(SnakeBodyBrick.BlockName, SnakeBodyBrick.BlockEnts);
+
+            Game game = new Game();
+            game.Start();
+        }
+
+        [CommandMethod("getinput")]
+        public static void GetInput()
+        {
+            Database db = HostApplicationServices.WorkingDatabase;
+            Editor ed = Application.DocumentManager.MdiActiveDocument.Editor;
+        
+        }
+
 
     }
 }
